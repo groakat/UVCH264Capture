@@ -10,5 +10,7 @@ Install on Windows
 2. Install PyGI AIO
   * download from http://sourceforge.net/projects/pygobjectwin32/files/
   * select anaconda as python distribution
-  * select Gstreamer, gst-plugins, gst-plugins-extra libraries
+  * select following libraries:
+    * Gstreamer, gst-plugins, gst-plugins-extra, GTK
+  * you do not need to select anything in the two following dialogs
   * select downgrade of Gtk
