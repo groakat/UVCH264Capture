@@ -2,15 +2,21 @@ UVCH264Capture
 ==============
 
 
-Install on Windows
-##################
+Linux only.
 
-1. Install anaconda 32bit (!)
-  * download from http://continuum.io/downloads
-2. Install PyGI AIO
-  * download from http://sourceforge.net/projects/pygobjectwin32/files/
-  * select anaconda as python distribution
-  * select following libraries:
-    * Gstreamer, gst-plugins, gst-plugins-extra, GTK
-  * you do not need to select anything in the two following dialogs
-  * select downgrade of Gtk
+Dependencies:
+
+- python
+- GTK bindings
+- gstreamer1.0 bindings
+
+In ubuntu, you can get all these with:
+
+- download anaconda: http://continuum.io/downloads
+- download gstreamer (http://askubuntu.com/a/279516):
+
+ sudo add-apt-repository ppa:gstreamer-developers/ppa
+ sudo apt-get update
+ sudo apt-get install gstreamer1.0*
+ 
+- install gsk
