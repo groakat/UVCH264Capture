@@ -15,6 +15,7 @@ In ubuntu, you can get all these with:
 - download anaconda (optional): http://continuum.io/downloads
 - download gstreamer (http://askubuntu.com/a/279516):
 
+```bash
  sudo add-apt-repository ppa:gstreamer-developers/ppa
  sudo apt-get update
  sudo apt-get install gstreamer1.0*
@@ -27,7 +28,8 @@ In ubuntu, you can get all these with:
     gstreamer1.0-plugins-ugly \
     gstreamer1.0-plugins-bad \
     gstreamer1.0-libav
- 
+```
+
 - if anaconda is used, add the system installed python packages to the python path so that they can be imported to ipython. Add the following line to ~.bashrc:
 
 ```bash    
