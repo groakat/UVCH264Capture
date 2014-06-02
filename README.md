@@ -7,12 +7,12 @@ Linux only.
 Dependencies:
 
 - python
-- GTK bindings
+- GTK bindings (come with gstreamer bindings)
 - gstreamer1.0 bindings
 
 In ubuntu, you can get all these with:
 
-- download anaconda: http://continuum.io/downloads
+- download anaconda (optional): http://continuum.io/downloads
 - download gstreamer (http://askubuntu.com/a/279516):
 
  sudo add-apt-repository ppa:gstreamer-developers/ppa
@@ -28,4 +28,9 @@ In ubuntu, you can get all these with:
     gstreamer1.0-plugins-bad \
     gstreamer1.0-libav
  
-- install gsk
+- if anaconda is used, add the system installed python packages to the python path so that they can be imported to ipython. Add the following line to ~.bashrc:
+
+    # added by Anaconda 2.0.0 installer
+    export PATH="/home/iha/anaconda/bin:$PATH"
+    export PYTHONPATH="/usr/lib/python2.7/dist-packages/:$PYTHONPATH"
+
