@@ -30,7 +30,8 @@ In ubuntu, you can get all these with:
  
 - if anaconda is used, add the system installed python packages to the python path so that they can be imported to ipython. Add the following line to ~.bashrc:
 
+```bash    
     # added by Anaconda 2.0.0 installer
     export PATH="/home/iha/anaconda/bin:$PATH"
     export PYTHONPATH="/usr/lib/python2.7/dist-packages/:$PYTHONPATH"
-
+```
