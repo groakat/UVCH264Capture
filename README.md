@@ -37,3 +37,12 @@ In ubuntu, you can get all these with:
     export PATH="/home/iha/anaconda/bin:$PATH"
     export PYTHONPATH="/usr/lib/python2.7/dist-packages/:$PYTHONPATH"
 ```
+
+If the uvch264src is not in the gstreamer package (likely) you need to compile it for yourself. Make sure that you install `gudev` and `libusb` first:
+
+```bash
+sudo apt-get install libgudev-1.0-dev 
+sudo apt-get install libusb-1.0-0-dev
+```
+
+Follow instructions on: https://gist.github.com/groakat/ae74323933678c6ad04a
