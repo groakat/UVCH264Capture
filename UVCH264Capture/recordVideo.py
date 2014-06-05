@@ -277,7 +277,7 @@ class pipelineSwap(object):
 
 
         self.log.debug("set uvch264 properties")   
-        self.elements["src"].set_property("auto-start", True)
+        #self.elements["src"].set_property("auto-start", True)
         self.elements["src"].set_property("fixed-framerate", True)
         self.elements["src"].set_property("async-handling", False)
         self.elements["src"].set_property("iframe-period", 30)
@@ -285,6 +285,7 @@ class pipelineSwap(object):
 #         self.elements["src"].set_property("usage-type", 3)
 #         self.elements["src"].set_property("num-clock-samples", -1)
         self.elements["src"].set_property("device", self.device)
+        self.elements["src"].set_property("mode", 2)
         
         self.log.debug("set caps")           
         caps = Gst.Caps.from_string("video/x-h264,width=1920,height=1080,framerate=30/1,profile=constrained-baseline")
@@ -313,6 +314,7 @@ class pipelineSwap(object):
         
         Gst.debug_bin_to_dot_file_with_ts(self.pipelines["main"], Gst.DebugGraphDetails.ALL, "main_before" )
         self.xid = self.drawingarea.get_property('window').get_xid()
+	print self.elements["src"].emit('start-capture')
         self.pipelines["main"].set_state(Gst.State.PLAYING)
 #         self.pipelines["catch"].set_state(Gst.State.PLAYING)
         Gtk.main()

@@ -375,7 +375,7 @@ class pipelineSwap(object):
 
     def on_button_clicked(self, widget):
         print "Hello World"
-        #self.blockOnNextKeyframe()
+        self.blockOnNextKeyframe()
         self.setAutoFocus(False)
         self.setAbsoluteFocus(30)
         self.setGain(1)
